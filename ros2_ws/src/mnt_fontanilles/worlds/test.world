@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <world name="default">
+        <model name='ground_plane'>
+          <static>1</static>
+          <link name='link'>
+            <collision name='collision'>
+              <geometry>
+                <plane>
+                  <normal>0 0 1</normal>
+                  <size>100 100</size>
+                </plane>
+              </geometry>
+              <surface>
+                <friction>
+                  <ode>
+                    <mu>100</mu>
+                    <mu2>50</mu2>
+                  </ode>
+                  <torsional>
+                    <ode/>
+                  </torsional>
+                </friction>
+                <contact>
+                  <ode/>
+                </contact>
+                <bounce/>
+              </surface>
+              <max_contacts>10</max_contacts>
+            </collision>
+            <self_collide>0</self_collide>
+            <enable_wind>0</enable_wind>
+            <kinematic>0</kinematic>
+          </link>
+        </model>
+
+        <scene>
+            <sky>
+                <clouds>
+                    <speed>12</speed>
+                </clouds>
+            </sky>
+            <grid>0</grid>
+            <origin_visual>0</origin_visual>
+        </scene>
+
+        <include>
+            <uri>model://sun</uri>
+        </include>
+
+        <include>
+            <uri>model://mnt_fontanilles</uri>
+        </include>
+
+        <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+            <update_rate>10</update_rate>
+        </plugin>
+        <physics type="ode">
+            <max_step_size>0.001</max_step_size>
+        </physics>
+
+        <gui>
+            <plugin name="sample" filename="libgui_tennis_court_overlay.so"/>
+            <camera name="camera">
+                <pose>-22.73 23.81 24.92 0 0.7 -0.76</pose>
+            </camera>
+        </gui>
+    </world>
+</sdf>

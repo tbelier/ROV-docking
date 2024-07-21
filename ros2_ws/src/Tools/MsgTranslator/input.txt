@@ -1,0 +1,85 @@
+<<<<<<< HEAD
+Raw Sensors Packet
+Packet ID 28
+Length 52
+Read / Write Read
+Field # Bytes Offset Data Type Size Description
+1 0 fp32 4 Accelerometer X (m/s/s)
+2 4 fp32 4 Accelerometer Y (m/s/s)
+3 8 fp32 4 Accelerometer Z (m/s/s)
+4 12 fp32 4 Gyroscope X (rad/s)
+v2.0 Page 106 11 September 2023
+Subsonus Reference Manual • Advanced Navigation Packet Protocol
+Raw Sensors Packet
+5 16 fp32 4 Gyroscope Y (rad/s)
+6 20 fp32 4 Gyroscope Z (rad/s)
+7 24 fp32 4 Magnetometer X (mG)
+8 28 fp32 4 Magnetometer Y (mG)
+9 32 fp32 4 Magnetometer Z (mG)
+10 36 fp32 4 Internal Temperature (deg C)
+11 40 fp32 4 Pressure depth (m)
+12 44 fp32 4 Water Temperature (deg C)
+13 48 fp32 4 Velocity of Sound (m
+=======
+1 0 u16 2 Device Address see section 15
+
+Subsonus Reference Manual
+Page 79 of 124
+Version 1.9
+22/10/2021
+2 2 u8 1 Tracking status, see section 17.9.5.1
+3 3 u32 4 Local System status, see section 17.9.1.1
+4 7 u32 4 Local Filter status, see section 17.9.1.2
+5 11 u32 4 Data Valid Flags, see section 17.9.5.2
+6 15 u32 4 Local Unix time stamp seconds, see section 17.9.1.4
+7 19 u32 4 Local Microseconds, see section 17.9.1.5
+8 23 fp64 8 Local Latitude (rad)
+9 31 fp64 8 Local Longitude (rad)
+10 39 fp64 8 Local Height (m)
+11 47 fp32 4 Local Velocity north (m/s)
+12 51 fp32 4 Local Velocity east (m/s)
+13 55 fp32 4 Local Velocity down (m/s)
+14 59 fp32 4 Local Roll (radians)
+15 63 fp32 4 Local Pitch (radians)
+16 67 fp32 4 Local Heading (radians)
+17 71 fp32 4 Local Latitude standard deviation (m)
+18 75 fp32 4 Local Longitude standard deviation (m)
+19 79 fp32 4 Local Height standard deviation (m)
+20 83 fp32 4 Local Roll standard deviation (rad)
+21 87 fp32 4 Local Pitch standard deviation (rad)
+22 91 fp32 4 Local Heading standard deviation (rad)
+23 95 fp32 4 Local Depth (m)
+24 99 u32 4 Remote Age in Microseconds, see section 17.9.5.3
+25 103 fp32 4 Remote Range (m)
+26 107 fp32 4 Remote Azimuth (rad)
+27 111 fp32 4 Remote Elevation (rad)
+28 115 fp32 4 Remote Position Raw X (m) (no correction)
+29 119 fp32 4 Remote Position Raw Y (m) (no correction)
+30 123 fp32 4 Remote Position Raw Z (m) (no correction)
+31 127 fp32 4 Remote Position X (m) (roll pitch correction)
+32 131 fp32 4 Remote Position Y (m) (roll pitch correction)
+33 135 fp32 4 Remote Position Z (m) (roll pitch correction)
+34 139 fp32 4 Remote North (m) (roll, pitch, heading correction)
+35 143 fp32 4 Remote East (m) (roll, pitch, heading correction)
+36 147 fp32 4 Remote Down (m) (roll, pitch, heading correction)
+
+Subsonus Reference Manual
+Page 80 of 124
+Version 1.9
+22/10/2021
+37 151 fp64 8 Remote Latitude (rad)
+38 159 fp64 8 Remote Longitude (rad)
+39 167 fp64 8 Remote Height (m)
+40 175 fp32 4 Remote Range standard deviation (m)
+41 179 fp32 4 Remote Azimuth standard deviation (rad)
+42 183 fp32 4 Remote Elevation standard deviation (rad)
+43 187 fp32 4 Remote Latitude standard deviation (m)
+44 191 fp32 4 Remote Longitude standard deviation (m)
+45 195 fp32 4 Remote Height standard deviation (m)
+46 199 fp32 4 Remote Depth (m)
+47 203 s8 1 Signal Level (dBV)
+48 204 s8 1 Signal To Noise Ratio (SNR)
+49 205 u8 1 Signal Correlation Ratio
+50 206 u8 1 Signal Correlation Interference
+51 207 u32 4 reserved
+>>>>>>> develop

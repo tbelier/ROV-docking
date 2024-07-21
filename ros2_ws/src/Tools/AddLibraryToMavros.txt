@@ -1,0 +1,6 @@
+sudo apt-get install libasio-dev
+sudo apt-get install ros-galactic-mavlink 
+sudo apt-get install ros-galactic-geographic-msgs
+sudo apt-get install ros-galactic-eigen-stl-containers
+sudo apt-get install ros-galactic-diagnostic-updater
+

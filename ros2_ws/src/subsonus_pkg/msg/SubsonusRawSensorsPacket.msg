@@ -1,0 +1,15 @@
+float32 accelerometer_x
+float32 accelerometer_y
+float32 accelerometer_z
+float32 gyroscope_x
+float32 gyroscope_y
+float32 gyroscope_z
+float32 magnetometer_x
+float32 magnetometer_y
+float32 magnetometer_z
+float32 cap_calib
+float32 cap
+float32 internal_temperature
+float32 pressure_depth
+float32 water_temperature
+float32 velocity_of_sound
